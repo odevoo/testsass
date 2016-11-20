@@ -1,0 +1,936 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+/*body {
+    width: 100%;
+    min-width: 779px;
+    background: #eff5ed;
+    font-family: courier, serif;
+}*/
+.skill-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
+  bottom: 40%;
+  min-width: calc(120px * 5 + 5 * (25px + 17.5px));
+  padding: 0 20px; }
+  .skill-wrapper .skill-progress {
+    display: inline-block;
+    background-color: rgba(141, 166, 179, 0.4);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 25px; }
+    .skill-wrapper .skill-progress:last-child {
+      margin-right: 0; }
+    .skill-wrapper .skill-progress .circle .mask, .skill-wrapper .skill-progress .circle .mask:before {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      border-radius: 50%;
+      transition: -webkit-transform 2s;
+      transition: -ms-transform 2s;
+      transition: transform 2s;
+      -webkit-backface-visibility: hidden;
+      clip: rect(0px, 120px, 120px, 60px); }
+      .skill-wrapper .skill-progress .circle .mask:before {
+        display: block;
+        content: '';
+        clip: rect(0px, 60px, 120px, 0px);
+        background-color: #fff781; }
+    .skill-wrapper .skill-progress .circle:before {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      border-radius: 50%;
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3) inset; }
+    .skill-wrapper .skill-progress .inset {
+      width: 85px;
+      height: 85px;
+      position: absolute;
+      margin-left: 17.5px;
+      margin-top: 17.5px;
+      background-color: #fbfbfb;
+      border-radius: 50%;
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3); }
+      .skill-wrapper .skill-progress .inset:before {
+        content: '';
+        display: block;
+        width: 44px;
+        height: 22px;
+        position: absolute;
+        top: 31.5px;
+        left: 20.5px;
+        line-height: 1;
+        transition: width 2s 3s;
+        overflow: hidden; }
+      .skill-wrapper .skill-progress .inset .numbers {
+        margin-top: -22px;
+        transition: width 2s; }
+
+.go:nth-child(n+1) .circle .mask:before, .go:nth-child(n+1) .circle .mask:nth-child(2), .go:nth-child(n+1) .skill-wrapper .skill-progress .circle .mask:nth-child(2):before, .skill-wrapper .skill-progress .go:nth-child(n+1) .circle .mask:nth-child(2):before {
+  -webkit-transform: rotate(153deg);
+  -ms-transform: rotate(153deg);
+  transform: rotate(153deg); }
+.go:nth-child(n+1) .inset .numbers {
+  width: 3784px; }
+  .go:nth-child(n+1) .inset .numbers:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "85%";
+    font-size: 22px;
+    font-weight: 800;
+    color: #FFF11B;
+    animation: go-1 2s ease-out; }
+@keyframes go-1 {
+  1.17647% {
+    content: "1%"; }
+  2.35294% {
+    content: "2%"; }
+  3.52941% {
+    content: "3%"; }
+  4.70588% {
+    content: "4%"; }
+  5.88235% {
+    content: "5%"; }
+  7.05882% {
+    content: "6%"; }
+  8.23529% {
+    content: "7%"; }
+  9.41176% {
+    content: "8%"; }
+  10.58824% {
+    content: "9%"; }
+  11.76471% {
+    content: "10%"; }
+  12.94118% {
+    content: "11%"; }
+  14.11765% {
+    content: "12%"; }
+  15.29412% {
+    content: "13%"; }
+  16.47059% {
+    content: "14%"; }
+  17.64706% {
+    content: "15%"; }
+  18.82353% {
+    content: "16%"; }
+  20% {
+    content: "17%"; }
+  21.17647% {
+    content: "18%"; }
+  22.35294% {
+    content: "19%"; }
+  23.52941% {
+    content: "20%"; }
+  24.70588% {
+    content: "21%"; }
+  25.88235% {
+    content: "22%"; }
+  27.05882% {
+    content: "23%"; }
+  28.23529% {
+    content: "24%"; }
+  29.41176% {
+    content: "25%"; }
+  30.58824% {
+    content: "26%"; }
+  31.76471% {
+    content: "27%"; }
+  32.94118% {
+    content: "28%"; }
+  34.11765% {
+    content: "29%"; }
+  35.29412% {
+    content: "30%"; }
+  36.47059% {
+    content: "31%"; }
+  37.64706% {
+    content: "32%"; }
+  38.82353% {
+    content: "33%"; }
+  40% {
+    content: "34%"; }
+  41.17647% {
+    content: "35%"; }
+  42.35294% {
+    content: "36%"; }
+  43.52941% {
+    content: "37%"; }
+  44.70588% {
+    content: "38%"; }
+  45.88235% {
+    content: "39%"; }
+  47.05882% {
+    content: "40%"; }
+  48.23529% {
+    content: "41%"; }
+  49.41176% {
+    content: "42%"; }
+  50.58824% {
+    content: "43%"; }
+  51.76471% {
+    content: "44%"; }
+  52.94118% {
+    content: "45%"; }
+  54.11765% {
+    content: "46%"; }
+  55.29412% {
+    content: "47%"; }
+  56.47059% {
+    content: "48%"; }
+  57.64706% {
+    content: "49%"; }
+  58.82353% {
+    content: "50%"; }
+  60% {
+    content: "51%"; }
+  61.17647% {
+    content: "52%"; }
+  62.35294% {
+    content: "53%"; }
+  63.52941% {
+    content: "54%"; }
+  64.70588% {
+    content: "55%"; }
+  65.88235% {
+    content: "56%"; }
+  67.05882% {
+    content: "57%"; }
+  68.23529% {
+    content: "58%"; }
+  69.41176% {
+    content: "59%"; }
+  70.58824% {
+    content: "60%"; }
+  71.76471% {
+    content: "61%"; }
+  72.94118% {
+    content: "62%"; }
+  74.11765% {
+    content: "63%"; }
+  75.29412% {
+    content: "64%"; }
+  76.47059% {
+    content: "65%"; }
+  77.64706% {
+    content: "66%"; }
+  78.82353% {
+    content: "67%"; }
+  80% {
+    content: "68%"; }
+  81.17647% {
+    content: "69%"; }
+  82.35294% {
+    content: "70%"; }
+  83.52941% {
+    content: "71%"; }
+  84.70588% {
+    content: "72%"; }
+  85.88235% {
+    content: "73%"; }
+  87.05882% {
+    content: "74%"; }
+  88.23529% {
+    content: "75%"; }
+  89.41176% {
+    content: "76%"; }
+  90.58824% {
+    content: "77%"; }
+  91.76471% {
+    content: "78%"; }
+  92.94118% {
+    content: "79%"; }
+  94.11765% {
+    content: "80%"; }
+  95.29412% {
+    content: "81%"; }
+  96.47059% {
+    content: "82%"; }
+  97.64706% {
+    content: "83%"; }
+  98.82353% {
+    content: "84%"; }
+  100% {
+    content: "85%"; } }
+  .go:nth-child(n+1) .inset .numbers:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "HTML5";
+    font-weight: 100;
+    color: #b4a900;
+    top: 120px; }
+.go:nth-child(n+2) .circle .mask:before, .go:nth-child(n+2) .circle .mask:nth-child(2), .go:nth-child(n+2) .skill-wrapper .skill-progress .circle .mask:nth-child(2):before, .skill-wrapper .skill-progress .go:nth-child(n+2) .circle .mask:nth-child(2):before {
+  -webkit-transform: rotate(167.4deg);
+  -ms-transform: rotate(167.4deg);
+  transform: rotate(167.4deg); }
+.go:nth-child(n+2) .inset .numbers {
+  width: 4136px; }
+  .go:nth-child(n+2) .inset .numbers:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "93%";
+    font-size: 22px;
+    font-weight: 800;
+    color: #FFF11B;
+    animation: go-2 2s ease-out; }
+@keyframes go-2 {
+  1.07527% {
+    content: "1%"; }
+  2.15054% {
+    content: "2%"; }
+  3.22581% {
+    content: "3%"; }
+  4.30108% {
+    content: "4%"; }
+  5.37634% {
+    content: "5%"; }
+  6.45161% {
+    content: "6%"; }
+  7.52688% {
+    content: "7%"; }
+  8.60215% {
+    content: "8%"; }
+  9.67742% {
+    content: "9%"; }
+  10.75269% {
+    content: "10%"; }
+  11.82796% {
+    content: "11%"; }
+  12.90323% {
+    content: "12%"; }
+  13.97849% {
+    content: "13%"; }
+  15.05376% {
+    content: "14%"; }
+  16.12903% {
+    content: "15%"; }
+  17.2043% {
+    content: "16%"; }
+  18.27957% {
+    content: "17%"; }
+  19.35484% {
+    content: "18%"; }
+  20.43011% {
+    content: "19%"; }
+  21.50538% {
+    content: "20%"; }
+  22.58065% {
+    content: "21%"; }
+  23.65591% {
+    content: "22%"; }
+  24.73118% {
+    content: "23%"; }
+  25.80645% {
+    content: "24%"; }
+  26.88172% {
+    content: "25%"; }
+  27.95699% {
+    content: "26%"; }
+  29.03226% {
+    content: "27%"; }
+  30.10753% {
+    content: "28%"; }
+  31.1828% {
+    content: "29%"; }
+  32.25806% {
+    content: "30%"; }
+  33.33333% {
+    content: "31%"; }
+  34.4086% {
+    content: "32%"; }
+  35.48387% {
+    content: "33%"; }
+  36.55914% {
+    content: "34%"; }
+  37.63441% {
+    content: "35%"; }
+  38.70968% {
+    content: "36%"; }
+  39.78495% {
+    content: "37%"; }
+  40.86022% {
+    content: "38%"; }
+  41.93548% {
+    content: "39%"; }
+  43.01075% {
+    content: "40%"; }
+  44.08602% {
+    content: "41%"; }
+  45.16129% {
+    content: "42%"; }
+  46.23656% {
+    content: "43%"; }
+  47.31183% {
+    content: "44%"; }
+  48.3871% {
+    content: "45%"; }
+  49.46237% {
+    content: "46%"; }
+  50.53763% {
+    content: "47%"; }
+  51.6129% {
+    content: "48%"; }
+  52.68817% {
+    content: "49%"; }
+  53.76344% {
+    content: "50%"; }
+  54.83871% {
+    content: "51%"; }
+  55.91398% {
+    content: "52%"; }
+  56.98925% {
+    content: "53%"; }
+  58.06452% {
+    content: "54%"; }
+  59.13978% {
+    content: "55%"; }
+  60.21505% {
+    content: "56%"; }
+  61.29032% {
+    content: "57%"; }
+  62.36559% {
+    content: "58%"; }
+  63.44086% {
+    content: "59%"; }
+  64.51613% {
+    content: "60%"; }
+  65.5914% {
+    content: "61%"; }
+  66.66667% {
+    content: "62%"; }
+  67.74194% {
+    content: "63%"; }
+  68.8172% {
+    content: "64%"; }
+  69.89247% {
+    content: "65%"; }
+  70.96774% {
+    content: "66%"; }
+  72.04301% {
+    content: "67%"; }
+  73.11828% {
+    content: "68%"; }
+  74.19355% {
+    content: "69%"; }
+  75.26882% {
+    content: "70%"; }
+  76.34409% {
+    content: "71%"; }
+  77.41935% {
+    content: "72%"; }
+  78.49462% {
+    content: "73%"; }
+  79.56989% {
+    content: "74%"; }
+  80.64516% {
+    content: "75%"; }
+  81.72043% {
+    content: "76%"; }
+  82.7957% {
+    content: "77%"; }
+  83.87097% {
+    content: "78%"; }
+  84.94624% {
+    content: "79%"; }
+  86.02151% {
+    content: "80%"; }
+  87.09677% {
+    content: "81%"; }
+  88.17204% {
+    content: "82%"; }
+  89.24731% {
+    content: "83%"; }
+  90.32258% {
+    content: "84%"; }
+  91.39785% {
+    content: "85%"; }
+  92.47312% {
+    content: "86%"; }
+  93.54839% {
+    content: "87%"; }
+  94.62366% {
+    content: "88%"; }
+  95.69892% {
+    content: "89%"; }
+  96.77419% {
+    content: "90%"; }
+  97.84946% {
+    content: "91%"; }
+  98.92473% {
+    content: "92%"; }
+  100% {
+    content: "93%"; } }
+  .go:nth-child(n+2) .inset .numbers:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "CSS3/SCSS";
+    font-weight: 100;
+    color: #b4a900;
+    top: 120px; }
+.go:nth-child(n+3) .circle .mask:before, .go:nth-child(n+3) .circle .mask:nth-child(2), .go:nth-child(n+3) .skill-wrapper .skill-progress .circle .mask:nth-child(2):before, .skill-wrapper .skill-progress .go:nth-child(n+3) .circle .mask:nth-child(2):before {
+  -webkit-transform: rotate(156.6deg);
+  -ms-transform: rotate(156.6deg);
+  transform: rotate(156.6deg); }
+.go:nth-child(n+3) .inset .numbers {
+  width: 3872px; }
+  .go:nth-child(n+3) .inset .numbers:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "87%";
+    font-size: 22px;
+    font-weight: 800;
+    color: #FFF11B;
+    animation: go-3 2s ease-out; }
+@keyframes go-3 {
+  1.14943% {
+    content: "1%"; }
+  2.29885% {
+    content: "2%"; }
+  3.44828% {
+    content: "3%"; }
+  4.5977% {
+    content: "4%"; }
+  5.74713% {
+    content: "5%"; }
+  6.89655% {
+    content: "6%"; }
+  8.04598% {
+    content: "7%"; }
+  9.1954% {
+    content: "8%"; }
+  10.34483% {
+    content: "9%"; }
+  11.49425% {
+    content: "10%"; }
+  12.64368% {
+    content: "11%"; }
+  13.7931% {
+    content: "12%"; }
+  14.94253% {
+    content: "13%"; }
+  16.09195% {
+    content: "14%"; }
+  17.24138% {
+    content: "15%"; }
+  18.3908% {
+    content: "16%"; }
+  19.54023% {
+    content: "17%"; }
+  20.68966% {
+    content: "18%"; }
+  21.83908% {
+    content: "19%"; }
+  22.98851% {
+    content: "20%"; }
+  24.13793% {
+    content: "21%"; }
+  25.28736% {
+    content: "22%"; }
+  26.43678% {
+    content: "23%"; }
+  27.58621% {
+    content: "24%"; }
+  28.73563% {
+    content: "25%"; }
+  29.88506% {
+    content: "26%"; }
+  31.03448% {
+    content: "27%"; }
+  32.18391% {
+    content: "28%"; }
+  33.33333% {
+    content: "29%"; }
+  34.48276% {
+    content: "30%"; }
+  35.63218% {
+    content: "31%"; }
+  36.78161% {
+    content: "32%"; }
+  37.93103% {
+    content: "33%"; }
+  39.08046% {
+    content: "34%"; }
+  40.22989% {
+    content: "35%"; }
+  41.37931% {
+    content: "36%"; }
+  42.52874% {
+    content: "37%"; }
+  43.67816% {
+    content: "38%"; }
+  44.82759% {
+    content: "39%"; }
+  45.97701% {
+    content: "40%"; }
+  47.12644% {
+    content: "41%"; }
+  48.27586% {
+    content: "42%"; }
+  49.42529% {
+    content: "43%"; }
+  50.57471% {
+    content: "44%"; }
+  51.72414% {
+    content: "45%"; }
+  52.87356% {
+    content: "46%"; }
+  54.02299% {
+    content: "47%"; }
+  55.17241% {
+    content: "48%"; }
+  56.32184% {
+    content: "49%"; }
+  57.47126% {
+    content: "50%"; }
+  58.62069% {
+    content: "51%"; }
+  59.77011% {
+    content: "52%"; }
+  60.91954% {
+    content: "53%"; }
+  62.06897% {
+    content: "54%"; }
+  63.21839% {
+    content: "55%"; }
+  64.36782% {
+    content: "56%"; }
+  65.51724% {
+    content: "57%"; }
+  66.66667% {
+    content: "58%"; }
+  67.81609% {
+    content: "59%"; }
+  68.96552% {
+    content: "60%"; }
+  70.11494% {
+    content: "61%"; }
+  71.26437% {
+    content: "62%"; }
+  72.41379% {
+    content: "63%"; }
+  73.56322% {
+    content: "64%"; }
+  74.71264% {
+    content: "65%"; }
+  75.86207% {
+    content: "66%"; }
+  77.01149% {
+    content: "67%"; }
+  78.16092% {
+    content: "68%"; }
+  79.31034% {
+    content: "69%"; }
+  80.45977% {
+    content: "70%"; }
+  81.6092% {
+    content: "71%"; }
+  82.75862% {
+    content: "72%"; }
+  83.90805% {
+    content: "73%"; }
+  85.05747% {
+    content: "74%"; }
+  86.2069% {
+    content: "75%"; }
+  87.35632% {
+    content: "76%"; }
+  88.50575% {
+    content: "77%"; }
+  89.65517% {
+    content: "78%"; }
+  90.8046% {
+    content: "79%"; }
+  91.95402% {
+    content: "80%"; }
+  93.10345% {
+    content: "81%"; }
+  94.25287% {
+    content: "82%"; }
+  95.4023% {
+    content: "83%"; }
+  96.55172% {
+    content: "84%"; }
+  97.70115% {
+    content: "85%"; }
+  98.85057% {
+    content: "86%"; }
+  100% {
+    content: "87%"; } }
+  .go:nth-child(n+3) .inset .numbers:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "jQuery";
+    font-weight: 100;
+    color: #b4a900;
+    top: 120px; }
+.go:nth-child(n+4) .circle .mask:before, .go:nth-child(n+4) .circle .mask:nth-child(2), .go:nth-child(n+4) .skill-wrapper .skill-progress .circle .mask:nth-child(2):before, .skill-wrapper .skill-progress .go:nth-child(n+4) .circle .mask:nth-child(2):before {
+  -webkit-transform: rotate(100.8deg);
+  -ms-transform: rotate(100.8deg);
+  transform: rotate(100.8deg); }
+.go:nth-child(n+4) .inset .numbers {
+  width: 2508px; }
+  .go:nth-child(n+4) .inset .numbers:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "56%";
+    font-size: 22px;
+    font-weight: 800;
+    color: #FFF11B;
+    animation: go-4 2s ease-out; }
+@keyframes go-4 {
+  1.78571% {
+    content: "1%"; }
+  3.57143% {
+    content: "2%"; }
+  5.35714% {
+    content: "3%"; }
+  7.14286% {
+    content: "4%"; }
+  8.92857% {
+    content: "5%"; }
+  10.71429% {
+    content: "6%"; }
+  12.5% {
+    content: "7%"; }
+  14.28571% {
+    content: "8%"; }
+  16.07143% {
+    content: "9%"; }
+  17.85714% {
+    content: "10%"; }
+  19.64286% {
+    content: "11%"; }
+  21.42857% {
+    content: "12%"; }
+  23.21429% {
+    content: "13%"; }
+  25% {
+    content: "14%"; }
+  26.78571% {
+    content: "15%"; }
+  28.57143% {
+    content: "16%"; }
+  30.35714% {
+    content: "17%"; }
+  32.14286% {
+    content: "18%"; }
+  33.92857% {
+    content: "19%"; }
+  35.71429% {
+    content: "20%"; }
+  37.5% {
+    content: "21%"; }
+  39.28571% {
+    content: "22%"; }
+  41.07143% {
+    content: "23%"; }
+  42.85714% {
+    content: "24%"; }
+  44.64286% {
+    content: "25%"; }
+  46.42857% {
+    content: "26%"; }
+  48.21429% {
+    content: "27%"; }
+  50% {
+    content: "28%"; }
+  51.78571% {
+    content: "29%"; }
+  53.57143% {
+    content: "30%"; }
+  55.35714% {
+    content: "31%"; }
+  57.14286% {
+    content: "32%"; }
+  58.92857% {
+    content: "33%"; }
+  60.71429% {
+    content: "34%"; }
+  62.5% {
+    content: "35%"; }
+  64.28571% {
+    content: "36%"; }
+  66.07143% {
+    content: "37%"; }
+  67.85714% {
+    content: "38%"; }
+  69.64286% {
+    content: "39%"; }
+  71.42857% {
+    content: "40%"; }
+  73.21429% {
+    content: "41%"; }
+  75% {
+    content: "42%"; }
+  76.78571% {
+    content: "43%"; }
+  78.57143% {
+    content: "44%"; }
+  80.35714% {
+    content: "45%"; }
+  82.14286% {
+    content: "46%"; }
+  83.92857% {
+    content: "47%"; }
+  85.71429% {
+    content: "48%"; }
+  87.5% {
+    content: "49%"; }
+  89.28571% {
+    content: "50%"; }
+  91.07143% {
+    content: "51%"; }
+  92.85714% {
+    content: "52%"; }
+  94.64286% {
+    content: "53%"; }
+  96.42857% {
+    content: "54%"; }
+  98.21429% {
+    content: "55%"; }
+  100% {
+    content: "56%"; } }
+  .go:nth-child(n+4) .inset .numbers:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "JS";
+    font-weight: 100;
+    color: #b4a900;
+    top: 120px; }
+.go:nth-child(n+5) .circle .mask:before, .go:nth-child(n+5) .circle .mask:nth-child(2), .go:nth-child(n+5) .skill-wrapper .skill-progress .circle .mask:nth-child(2):before, .skill-wrapper .skill-progress .go:nth-child(n+5) .circle .mask:nth-child(2):before {
+  -webkit-transform: rotate(77.4deg);
+  -ms-transform: rotate(77.4deg);
+  transform: rotate(77.4deg); }
+.go:nth-child(n+5) .inset .numbers {
+  width: 1936px; }
+  .go:nth-child(n+5) .inset .numbers:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "43%";
+    font-size: 22px;
+    font-weight: 800;
+    color: #FFF11B;
+    animation: go-5 2s ease-out; }
+@keyframes go-5 {
+  2.32558% {
+    content: "1%"; }
+  4.65116% {
+    content: "2%"; }
+  6.97674% {
+    content: "3%"; }
+  9.30233% {
+    content: "4%"; }
+  11.62791% {
+    content: "5%"; }
+  13.95349% {
+    content: "6%"; }
+  16.27907% {
+    content: "7%"; }
+  18.60465% {
+    content: "8%"; }
+  20.93023% {
+    content: "9%"; }
+  23.25581% {
+    content: "10%"; }
+  25.5814% {
+    content: "11%"; }
+  27.90698% {
+    content: "12%"; }
+  30.23256% {
+    content: "13%"; }
+  32.55814% {
+    content: "14%"; }
+  34.88372% {
+    content: "15%"; }
+  37.2093% {
+    content: "16%"; }
+  39.53488% {
+    content: "17%"; }
+  41.86047% {
+    content: "18%"; }
+  44.18605% {
+    content: "19%"; }
+  46.51163% {
+    content: "20%"; }
+  48.83721% {
+    content: "21%"; }
+  51.16279% {
+    content: "22%"; }
+  53.48837% {
+    content: "23%"; }
+  55.81395% {
+    content: "24%"; }
+  58.13953% {
+    content: "25%"; }
+  60.46512% {
+    content: "26%"; }
+  62.7907% {
+    content: "27%"; }
+  65.11628% {
+    content: "28%"; }
+  67.44186% {
+    content: "29%"; }
+  69.76744% {
+    content: "30%"; }
+  72.09302% {
+    content: "31%"; }
+  74.4186% {
+    content: "32%"; }
+  76.74419% {
+    content: "33%"; }
+  79.06977% {
+    content: "34%"; }
+  81.39535% {
+    content: "35%"; }
+  83.72093% {
+    content: "36%"; }
+  86.04651% {
+    content: "37%"; }
+  88.37209% {
+    content: "38%"; }
+  90.69767% {
+    content: "39%"; }
+  93.02326% {
+    content: "40%"; }
+  95.34884% {
+    content: "41%"; }
+  97.67442% {
+    content: "42%"; }
+  100% {
+    content: "43%"; } }
+  .go:nth-child(n+5) .inset .numbers:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "PHP";
+    font-weight: 100;
+    color: #b4a900;
+    top: 120px; }
+
+/*# sourceMappingURL=style4.css.map */
