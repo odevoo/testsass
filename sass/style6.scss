@@ -8,10 +8,12 @@ $font-title: 'Anton', sans-serif;
 
 body {
   //background: #f3f3f3;
+  
   background: #FFF11B;
 }
 
 $main-color: #343436;
+//$main-color: #de5f5f;
 $detail-color: #fff;
 
 $experience-bg-color: #FFF11B;
@@ -22,6 +24,7 @@ $title-color: #3c3c3c;
 
 .centralize {
   display: flex;
+  z-index: -10;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -29,7 +32,7 @@ $title-color: #3c3c3c;
 
 h1 {
     //font-family: 'Raleway', sans-serif;
-    font-family: 'Shrikhand', cursive;
+    
   //font-weight: bold;
 }
 
@@ -42,386 +45,829 @@ h1 {
 }
 
 .title1 {
-
+  font-family: 'Shrikhand', cursive;
   white-space: nowrap;
   font-size: 100px;
   color: $main-color;
-  transform: perspective( 0px ) rotateX( 45deg );
+  transform: perspective(0) rotateX( 45deg );
   will-change: transform;
   transition-timing-function: cubic-bezier(0.88, 2.85, 0.46, -0.12);
   transition-duration: .2s;
   
-  text-shadow:  0px 1px 0 darken($main-color, 10),
-  0px 2px 0 darken($main-color, 10),
-  0px 3px 0 darken($main-color, 10),
-  0px 4px 0 darken($main-color, 10),
-  0px 5px 0 darken($main-color, 10),
-  0px 6px 0 darken($main-color, 10),
-  0px 7px 0 darken($main-color, 10),
+  text-shadow:  0 1px 0 darken($main-color, 10),
+  0 2px 0 darken($main-color, 10),
+  0 3px 0 darken($main-color, 10),
+  0 4px 0 darken($main-color, 10),
+  0 5px 0 darken($main-color, 10),
+  0 6px 0 darken($main-color, 10),
+  0 7px 0 darken($main-color, 10),
 
-  0px 5+1px 0 $detail-color,
-  0px 5+2px 0 $detail-color,
-  0px 5+3px 0 $detail-color,
-  0px 5+4px 0 $detail-color,
-  0px 5+5px 0 $detail-color,
-  0px 5+6px 0 $detail-color,
-  0px 5+7px 0 $detail-color,
+  0 5 + 1px 0 $detail-color,
+  0 5 + 2px 0 $detail-color,
+  0 5 + 3px 0 $detail-color,
+  0 5 + 4px 0 $detail-color,
+  0 5 + 5px 0 $detail-color,
+  0 5 + 6px 0 $detail-color,
+  0 5 + 7px 0 $detail-color,
 
-  2px 5+1px 0 $detail-color,
-  2px 5+2px 0 $detail-color,
-  2px 5+3px 0 $detail-color,
-  2px 5+4px 0 $detail-color,
-  2px 5+5px 0 $detail-color,
-  2px 5+6px 0 $detail-color,
-  2px 5+7px 0 $detail-color,
+  2px 5 + 1px 0 $detail-color,
+  2px 5 + 2px 0 $detail-color,
+  2px 5 + 3px 0 $detail-color,
+  2px 5 + 4px 0 $detail-color,
+  2px 5 + 5px 0 $detail-color,
+  2px 5 + 6px 0 $detail-color,
+  2px 5 + 7px 0 $detail-color,
 
-  -2px 5+1px 0 $detail-color,
-  -2px 5+2px 0 $detail-color,
-  -2px 5+3px 0 $detail-color,
-  -2px 5+4px 0 $detail-color,
-  -2px 5+5px 0 $detail-color,
-  -2px 5+6px 0 $detail-color,
-  -2px 5+7px 0 $detail-color,
+  -2px 5 + 1px 0 $detail-color,
+  -2px 5 + 2px 0 $detail-color,
+  -2px 5 + 3px 0 $detail-color,
+  -2px 5 + 4px 0 $detail-color,
+  -2px 5 + 5px 0 $detail-color,
+  -2px 5 + 6px 0 $detail-color,
+  -2px 5 + 7px 0 $detail-color,
 
-  0px 12+1px 0 darken($detail-color, 10),
-  0px 12+2px 0 darken($detail-color, 10),
-  0px 12+3px 0 darken($detail-color, 10),
-  0px 12+4px 0 darken($detail-color, 10),
-  0px 12+5px 0 darken($detail-color, 10),
-  0px 12+6px 0 darken($detail-color, 10),
-  0px 12+7px 0 darken($detail-color, 10),
+  0 12 + 1px 0 darken($detail-color, 10),
+  0 12 + 2px 0 darken($detail-color, 10),
+  0 12 + 3px 0 darken($detail-color, 10),
+  0 12 + 4px 0 darken($detail-color, 10),
+  0 12 + 5px 0 darken($detail-color, 10),
+  0 12 + 6px 0 darken($detail-color, 10),
+  0 12 + 7px 0 darken($detail-color, 10),
 
-  4px 10+1px 0 darken($detail-color, 10),
-  4px 10+2px 0 darken($detail-color, 10),
-  4px 10+3px 0 darken($detail-color, 10),
-  4px 10+4px 0 darken($detail-color, 10),
-  4px 10+5px 0 darken($detail-color, 10),
-  4px 10+6px 0 darken($detail-color, 10),
-  4px 10+7px 0 darken($detail-color, 10),
+  4px 10 + 1px 0 darken($detail-color, 10),
+  4px 10 + 2px 0 darken($detail-color, 10),
+  4px 10 + 3px 0 darken($detail-color, 10),
+  4px 10 + 4px 0 darken($detail-color, 10),
+  4px 10 + 5px 0 darken($detail-color, 10),
+  4px 10 + 6px 0 darken($detail-color, 10),
+  4px 10 + 7px 0 darken($detail-color, 10),
 
-  -4px 10+1px 0 darken($detail-color, 10),
-  -4px 10+2px 0 darken($detail-color, 10),
-  -4px 10+3px 0 darken($detail-color, 10),
-  -4px 10+4px 0 darken($detail-color, 10),
-  -4px 10+5px 0 darken($detail-color, 10),
-  -4px 10+6px 0 darken($detail-color, 10),
-  -4px 10+7px 0 darken($detail-color, 10),
+  -4px 10 + 1px 0 darken($detail-color, 10),
+  -4px 10 + 2px 0 darken($detail-color, 10),
+  -4px 10 + 3px 0 darken($detail-color, 10),
+  -4px 10 + 4px 0 darken($detail-color, 10),
+  -4px 10 + 5px 0 darken($detail-color, 10),
+  -4px 10 + 6px 0 darken($detail-color, 10),
+  -4px 10 + 7px 0 darken($detail-color, 10),
 
   3px 7px 0 darken($detail-color, 10),
   4px 8px 0 darken($detail-color, 10),
 
   -4px 9px 0 darken($detail-color, 10),
 
-  0 14+7px 15px #000;
+  0 14 + 7px 15px #000;
 }
 
 .invisible {
-    display: none;
+  display: none;
 }
 
-    h1:hover {
-      cursor: default;
-      transition-duration: .5s;
+h1:hover {
+  cursor: default;
+  transition-duration: .5s;
 
-      transform: perspective( 0px ) rotateX( 45deg ) translateY(-20px);
-      text-shadow:  0px 1px 0 darken($main-color, 10),
-      0px 2px 0 darken($main-color, 10),
-      0px 3px 0 darken($main-color, 10),
-      0px 4px 0 darken($main-color, 10),
-      0px 5px 0 darken($main-color, 10),
-      0px 6px 0 darken($main-color, 10),
-      0px 7px 0 darken($main-color, 10),
+  transform: perspective(0) rotateX( 45deg ) translateY(-20px);
+  text-shadow:  0 1px 0 darken($main-color, 10),
+  0 2px 0 darken($main-color, 10),
+  0 3px 0 darken($main-color, 10),
+  0 4px 0 darken($main-color, 10),
+  0 5px 0 darken($main-color, 10),
+  0 6px 0 darken($main-color, 10),
+  0 7px 0 darken($main-color, 10),
 
-      0px 5+1px 0 $detail-color,
-      0px 5+2px 0 $detail-color,
-      0px 5+3px 0 $detail-color,
-      0px 5+4px 0 $detail-color,
-      0px 5+5px 0 $detail-color,
-      0px 5+6px 0 $detail-color,
-      0px 5+7px 0 $detail-color,
+  0 5 + 1px 0 $detail-color,
+  0 5 + 2px 0 $detail-color,
+  0 5 + 3px 0 $detail-color,
+  0 5 + 4px 0 $detail-color,
+  0 5 + 5px 0 $detail-color,
+  0 5 + 6px 0 $detail-color,
+  0 5 + 7px 0 $detail-color,
 
-      2px 5+1px 0 $detail-color,
-      2px 5+2px 0 $detail-color,
-      2px 5+3px 0 $detail-color,
-      2px 5+4px 0 $detail-color,
-      2px 5+5px 0 $detail-color,
-      2px 5+6px 0 $detail-color,
-      2px 5+7px 0 $detail-color,
+  2px 5 + 1px 0 $detail-color,
+  2px 5 + 2px 0 $detail-color,
+  2px 5 + 3px 0 $detail-color,
+  2px 5 + 4px 0 $detail-color,
+  2px 5 + 5px 0 $detail-color,
+  2px 5 + 6px 0 $detail-color,
+  2px 5 + 7px 0 $detail-color,
 
-      -2px 5+1px 0 $detail-color,
-      -2px 5+2px 0 $detail-color,
-      -2px 5+3px 0 $detail-color,
-      -2px 5+4px 0 $detail-color,
-      -2px 5+5px 0 $detail-color,
-      -2px 5+6px 0 $detail-color,
-      -2px 5+7px 0 $detail-color,
+  -2px 5 + 1px 0 $detail-color,
+  -2px 5 + 2px 0 $detail-color,
+  -2px 5 + 3px 0 $detail-color,
+  -2px 5 + 4px 0 $detail-color,
+  -2px 5 + 5px 0 $detail-color,
+  -2px 5 + 6px 0 $detail-color,
+  -2px 5 + 7px 0 $detail-color,
 
-      0px 12+1px 0 darken($detail-color, 10),
-      0px 12+2px 0 darken($detail-color, 10),
-      0px 12+3px 0 darken($detail-color, 10),
-      0px 12+4px 0 darken($detail-color, 10),
-      0px 12+5px 0 darken($detail-color, 10),
-      0px 12+6px 0 darken($detail-color, 10),
-      0px 12+7px 0 darken($detail-color, 10),
+  0 12 + 1px 0 darken($detail-color, 10),
+  0 12 + 2px 0 darken($detail-color, 10),
+  0 12 + 3px 0 darken($detail-color, 10),
+  0 12 + 4px 0 darken($detail-color, 10),
+  0 12 + 5px 0 darken($detail-color, 10),
+  0 12 + 6px 0 darken($detail-color, 10),
+  0 12 + 7px 0 darken($detail-color, 10),
 
-      4px 10+1px 0 darken($detail-color, 10),
-      4px 10+2px 0 darken($detail-color, 10),
-      4px 10+3px 0 darken($detail-color, 10),
-      4px 10+4px 0 darken($detail-color, 10),
-      4px 10+5px 0 darken($detail-color, 10),
-      4px 10+6px 0 darken($detail-color, 10),
-      4px 10+7px 0 darken($detail-color, 10),
+  4px 10 + 1px 0 darken($detail-color, 10),
+  4px 10 + 2px 0 darken($detail-color, 10),
+  4px 10 + 3px 0 darken($detail-color, 10),
+  4px 10 + 4px 0 darken($detail-color, 10),
+  4px 10 + 5px 0 darken($detail-color, 10),
+  4px 10 + 6px 0 darken($detail-color, 10),
+  4px 10 + 7px 0 darken($detail-color, 10),
 
-      -4px 10 + 1px 0 darken($detail-color, 10),
-      -4px 10 + 2px 0 darken($detail-color, 10),
-      -4px 10 + 3px 0 darken($detail-color, 10),
-      -4px 10 + 4px 0 darken($detail-color, 10),
-      -4px 10 + 5px 0 darken($detail-color, 10),
-      -4px 10 + 6px 0 darken($detail-color, 10),
-      -4px 10 + 7px 0 darken($detail-color, 10),
+  -4px 10 + 1px 0 darken($detail-color, 10),
+  -4px 10 + 2px 0 darken($detail-color, 10),
+  -4px 10 + 3px 0 darken($detail-color, 10),
+  -4px 10 + 4px 0 darken($detail-color, 10),
+  -4px 10 + 5px 0 darken($detail-color, 10),
+  -4px 10 + 6px 0 darken($detail-color, 10),
+  -4px 10 + 7px 0 darken($detail-color, 10),
 
-      3px 7px 0 darken($detail-color, 10),
-      4px 8px 0 darken($detail-color, 10),
+  3px 7px 0 darken($detail-color, 10),
+  4px 8px 0 darken($detail-color, 10),
 
-      -4px 9px 0 darken($detail-color, 10),
+  -4px 9px 0 darken($detail-color, 10),
 
-      0 14 + 20 + 7px 30px #000;
+  0 14 + 20 + 7px 30px #000;
+}
+
+
+
+
+/***************************/
+
+.nav-content {
+  overflow: hidden;
+}
+
+.menu-trigger{
+  cursor: pointer;
+  position: fixed;
+  padding: 1rem;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  color: black;
+  transform: rotate(225deg);
+  transition: all 350ms ease;
+  &.open{
+    color: white;
+    transform: rotate(0deg);
   }
-
-
-
-
-  /***************************/
-
-
-
-  .menu-trigger{
-    cursor: pointer;
-    position: fixed;
-    padding: 1rem;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    color: black;
-    transform: rotate(225deg);
-    transition: all 350ms ease;
-    &.open{
-        color: #FFF11B;
-        transform: rotate(0deg);
-    }
 }
 
 
 #nav-overlay{
-    overflow: hidden;
-    position: fixed;
+  margin: -5px -10px -5px -10px;
+  overflow: hidden;
+  position: fixed;
+  width: 102%;
+  height: 102%;
+  nav{
     width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: -100%; 
+    left: 0;
     height: 100%;
-    nav{
-        width: 100%;
-        overflow: hidden;
-        position: absolute;
-        top: -100%; 
-        left: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        list-style: none;
-        z-index: 90;
-        transition: top 350ms ease;
-        li{
-            display: block;
-            text-align: center;
-            margin: 1rem 0;
-        }
-        a, a:visited{
-            font-size: 3rem;
-            font-weight: 400;
-            letter-spacing: 15px;
-            line-height: 1.25;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #FFF11B;
-            &:hover, &:focus, &:visited{
-                text-decoration: underline;
-            }
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    z-index: 90;
+    transition: top 350ms ease;
+    li{
+      display: block;
+      text-align: center;
+      margin: 1rem 0;
     }
-    &.open nav{
-        top: 0;
+    a, a:visited{
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 15px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      &:hover, &:focus, &:visited{
+        text-decoration: underline;
+      }
     }
-    &:before, 
-    &:after{
-        content: "";
-        position: absolute;
-        z-index: 50;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        transition: transform 350ms, -webkit-transform 350ms, -o-transform 350ms;
-        background-image: url('../img/back.jpg');
-        background-size: cover;
-        filter: blur(5px);
-        -webkit-filter: blur(5px);
-        background-repeat: repeat;
-        background-position: center center;
-    }
-    
+  }
+  &.open nav{
+    top: 0;
+  }
+  &:before, 
+  &:after{
+    content: "";
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: transform 350ms, -webkit-transform 350ms, -o-transform 350ms;
+    background-image: url('../img/back.jpg');
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    background-repeat: repeat;
+    background-position: center center;
+  }
+
     //Left Overlay
     &:before{
-        left: 0;
-        transform: skew(50deg) translateX(-200%);
-        clip: rect(auto 50vw auto auto);
-        @media(min-width: 500px){
-            transform: skew(50deg) translateX(-150%); 
-        }
+      left: 0;
+      transform: skew(50deg) translateX(-200%);
+      clip: rect(auto 50vw auto auto);
+      @media(min-width: 500px){
+        transform: skew(50deg) translateX(-150%); 
+      }
     }
     &.open:before{
-        transform: skew(0) translateX(0%);
+      transform: skew(0) translateX(0%);
     }
     //Right Overlay
     &:after{
-        right: 0;
-        transform: skew(50deg) translateX(200%);
-        clip: rect(auto auto auto 50vw);
-        @media(min-width: 500px){
-            transform: skew(50deg) translateX(150%); 
-        } 
+      right: 0;
+      transform: skew(50deg) translateX(200%);
+      clip: rect(auto auto auto 50vw);
+      @media(min-width: 500px){
+        transform: skew(50deg) translateX(150%); 
+      } 
     }
     &.open:after{
-        transform: skew(0) translateX(0%);
+      transform: skew(0) translateX(0%);
     }
-}
+  }
 
 //Icons
 .icon{
-    display: inline-block;
-    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    &.icon-menu:before{
-        content: '\f136';
-        font-size: 3rem;
-    }
+  display: inline-block;
+  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.icon-menu:before{
+    content: '\f136';
+    font-size: 3rem;
+  }
 }
 
 .screen-reader-text{
-    position: absolute;
-    left: -999999em;
+  position: absolute;
+  left: -999999em;
 }
 
 /***********   About **********/
 
 .aboutcontainer {
-    height: 100vh;
-    background: $main-color;
-    font-family: $font-title;
-    line-height: 1;
+  position: relative;
+  height: 100vh;
+  background: $main-color;
+  font-family: $font-title;
+  line-height: 1;
     //font-weight: bold;
     color: $detail-color;
     font-size: 2.5rem;
-}
-
-.aboutdesc {
-    //margin: 4%;
     display: flex;
+    z-index: -10;
+  }
+
+  .aboutdesc {
+    margin: 10% 2%;
+    padding:2%;
+    //display: flex;
     justify-content: center;
     //align-items: center;
     //white-space: nowrap;
+  }
+  .aboutimg {
+   margin: 7% 2%;
+   padding:2%;
+  }
+  .aboutimgtag {
+
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 5px;
+
+  }
+
+/*************** TIMELINE EXPERIENCE ****************/
+
+ @import "http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700";
+
+// Variables
+$bg-body: #3A99D8;
+
+$red: #ee4d4d;
+$blue: #2b2e48;
+$primary-color: $red;
+$secondary-color: $blue;
+
+
+// Typography
+$base-font: helvetica, arial, tahoma, verdana;
+$base-font-title: "Dosis", arial, tahoma, verdana;
+
+$base-font-color: #726f77;
+
+// Timeline
+$timeline-color: $primary-color;
+
+
+// Mixins and Placeholders
+%clearfix {
+  &:after, &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+  }
 }
 
-/***********   Experience   **********/
+@mixin prefix($prop, $val) {
+  @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
+    #{$prefix}#{$prop}: $val;
+  }
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 
+.timelinediv {
+  background: $bg-body;
+  height: 100vh;
+  width: 100%;
+  font-family: $font-title;
+}
 
-.experience{
-  background: $experience-bg-color;
-  padding: 50px 0;
-  overflow-x: hidden;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-name {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  color: white;
+}
+
+// Timeline
+#timeline {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  @include prefix(transition, all .4s ease);
+
+  &:before {
+    content:"";
+    width: 3px;
+    height: 100%;
+    background: $timeline-color;
+    left: 50%;
+    top: 0;
+    position: absolute;
+  }
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%;
+  }
   
-  .content{
-    text-align: center;
-    
-    h1{
-      font-size: 2em;
-      color: #fff;
-    }
-    
-    ul{
-      padding: 50px 0;
-      list-style-type: none;
+  .timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+    @extend %clearfix;
 
-      li{
-        background: $main-color;
+    .timeline-icon {
+      background: $timeline-color;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      overflow: hidden;
+      margin-left: -23px;
+      @include prefix(border-radius, 50%);
+
+      svg {
         position: relative;
-        margin-left: 20px;
-        width: 5px;
-        padding-bottom: 40px;
+        top: 14px;
+        left: 14px;
+      }
+    }
 
-        &:last-child{
-          padding-bottom: 7px;
-        }
+    .timeline-content {
+      width: 45%;
+      background: #fff;
+      padding: 20px;
+      @include prefix(box-shadow, 0 3px 0 rgba(0,0,0,0.1));
+      @include prefix(border-radius, 5px);
+      @include prefix(transition, all .3s ease);
 
-        &:before{
+      h2 {
+        padding: 15px;
+        background: $timeline-color;
+        color: #fff;
+        margin: -20px -20px 0 -20px;
+        font-weight: 300;
+        @include prefix(border-radius, 3px 3px 0 0);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 45%;
+        top: 20px;
+        width: 0; 
+        height: 0; 
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent; 
+        border-left:7px solid $timeline-color; 
+      }
+
+      &.right {
+        float: right;
+
+        &:before {
           content: '';
-          background: $experience-bg-color;
-          position: absolute;
-          left: 50%;
-          top: 0;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          width: 20px;
-          height: 20px;
-          border: 4px solid $main-color;
-        }
-
-        .hidden {
-          opacity: 0;
-          margin-left: 10vw;
-        }
-
-        .experience-content{
-          background: $main-color; 
-          position: relative;
-          top: 7px;
-          left: 48px;
-          width: calc(100vw - 100px);
-          padding: 20px;
-          text-align: center;
-          -webkit-border-radius: 0 5px 5px;
-          -moz-border-radius: 0 5px 5px;
-          border-radius: 0 5px 5px;
-
-          h2{
-            font-size: 1.5em;
-            color: #fff;
-            padding-bottom: 10px;
-          }
-
-          .experience-time{
-            color: #777;
-            font-size: 1.1em;
-            padding-bottom: 10px;
-          }
-
-          p{
-            color: #1a1a1a;
-            font-size: .95em;
-          }
-
-          &:before{
-            content: '';
-            background: $main-color;
-            position: absolute;
-            top: 0;
-            left: -35px;
-            width: 35px;
-            height: 5px;
-          }
+          right: 45%;
+          left: inherit;
+          border-left: 0;
+          border-right: 7px solid $timeline-color;
         }
       }
     }
   }
+}
+
+
+          .hidden {
+            opacity: 0;
+            //margin-left: 10vw;
+          }
+
+// Buttons
+
+
+@media screen and (max-width: 768px) {
+  #timeline {
+    margin: 30px;
+    padding: 0px;
+    width: 90%;
+    &:before {
+      left: 0;
+    }
+    
+    .timeline-item {
+      .timeline-content {
+        width: 90%;
+        float: right;
+        
+        &:before, &.right:before {
+          left: 10%;
+          margin-left: -6px;
+          border-left: 0;
+          border-right: 7px solid $timeline-color;
+        }
+      }
+
+      .timeline-icon {
+        left: 0;
+      }
+    }
+  }
+}
+
+
+
+/*****************************************************************/
+
+
+                            /*PORTFOLIO*/
+/*****************************************************************/
+
+.portfoliobox {
+  height: 100vh;
+  /*position: relative;
+  z-index: -10;*/
+}
+
+
+
+.container-portfolio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  &:hover{
+    & > .section{
+      filter: brightness(22%);
+    }
+    & > .section:hover{
+      filter: brightness(100%);
+    }
+  }
+  
+  .section{
+    flex-grow: 1;
+    position: relative;
+    height: 100%;
+    transition: all 0.4s;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1;
+    
+    .cont_title{
+      position:relative;
+      margin: auto;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      margin-top: 37vh;
+      
+      h1{
+        text-transform: uppercase;
+        color: white;
+        font-family: 'Economica', sans-serif;
+        text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
+        font-size: 3.5vw;
+        margin: 0;
+        transition: font-size 0.3s;
+        vertical-align: middle;
+      }
+      h3{
+        text-transform: uppercase;
+        font-family: 'Economica', sans-serif;
+        font-size: 1.3vw;
+        transition: all 0.3s;
+        color: white;
+        letter-spacing: 3px;
+        text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
+      }
+      
+    }
+    
+    .cont_desc{
+      position: relative;
+      display: block;
+      text-align: center;
+      width: 12vw;
+      height: auto;
+      margin: auto;
+      opacity: 0;
+      transition: opacity 0.8s, transform 0.7s, padding-top 0.9s;
+      padding-top: 6vh;
+      transform: scale(1);
+      p{
+        margin: 0;
+        font-family: 'Economica', sans-serif;
+        color: white;
+        font-size: 16px;
+      }
+    }
+    
+    &:hover{
+      flex-grow: 1.8;
+      transition: flex 0.2s;
+      
+      & > .cont_title h1{
+        font-size: 5.3vw;
+        transition: font-size 0.4s;
+      }
+      
+      & > .cont_title h3{
+        font-size: 1.6vw;
+        transition: all 0.4s;
+      }
+      
+      & > .cont_desc{
+        opacity: 1;
+        padding-top: 2vh;
+        transform: scale(1.5);
+        transition: opacity 0.7s, padding-top 0.5s, transform 0.1s;
+        
+        transition-delay: 0s, 0.1s, 0s;
+      }
+      
+    }
+    
+    &:nth-child(1){
+      background-image: url("../img/projet2.png");  
+    }
+    &:nth-child(2){
+      background-image: url("../img/projet3.png");  
+    }
+    &:nth-child(3){
+      background-image: url("../img/projet2.png");  
+    }
+    &:nth-child(4){
+      background-image: url("../img/projet3.png");  
+    }
+    &:nth-child(5){
+      background-image: url("../img/projet2.png");  
+    }
+  }
+}
+
+/************************************************************************/
+
+
+/********************** SKILL ************************************/
+
+
+.skillscontainer {
+  position: relative;
+  z-index: -10;
+  //background-color: #de5f5f;
+  background-color: #3A99D8;
+  height: 100vh;
+}
+
+
+.container-skills {
+  padding: 10px 50px;
+  text-align: center;
+}
+
+.chart {
+  position: relative;
+  display: inline-block;
+  margin: 20px 10px;
+  //color: #999;
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif; 
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.divskills {
+  margin: 4%;
+}
+
+
+/********************** GET IN TOUCH ************************************/
+
+
+.getintouchcontainer {
+  /*position: relative;
+  z-index: -10;*/
+  width: 100%;
+
+ height: 50vh;
+ background-color: $main-color;
+
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../font/icomoon.eot');
+  src:url('../font/icomoon.eot') format('embedded-opentype'),
+    url('../font/icomoon.woff') format('woff'),
+    url('../font/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.social-networks {
+  margin: 0 0 35px;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    margin: 0 7px;
+    width: 68px;
+    height: 68px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      margin-top: -50%;
+      margin-left: -50%;
+      border-radius: 100px;
+      background-color: #1f2027;
+      transition: all 400ms;
+    }
+
+    &:after {
+      position: relative;
+      display: block;
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      color: #fff;
+      font-size: 26px;
+      line-height: 66px;
+    }
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+  
+  &.spin-icon a:hover:after, &.spin-icon a:focus:after {
+    transition: transform 0.4s ease-out;
+    transform: rotateZ(360deg);
+  }
+  
+  &.square a:hover:before, &.square a:focus:before {
+    border-radius: 0;
+  }
+  
+  &.bounce a:hover, &.bounce a:focus {
+    animation: bounce 1s;
+  }
+  
+  $networks: linkedin '\eac9' #0077b5, facebook '\e603' #3b5998, twitter '\e618' #00b0ed, github '\eab1' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
+  
+  @each $network in $networks {
+     .icon-#{nth($network, 1)} {
+       &:after {
+         content: '#{nth($network, 2)}';
+      }
+
+      &:hover:before, &:focus:before {
+        background: nth($network, 3);
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -6px, 0);
+  }
+
+  70% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -4px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-2px,0);
+  }
+}
+
+.touchtext {
+  text-align: center;
+  margin-bottom: 2%;
+  padding-top: 2%;
+  font-family: $font-title;
+  line-height: 1;
+    //font-weight: bold;
+  color: $detail-color;
+  font-size: 2.5rem;
+}
+
+.email {
+  color: #ee4d4d;
+}
+
+.iconsdiv {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left:0;
 }

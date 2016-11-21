@@ -6,7 +6,7 @@ $(document).ready(function(){
     var bottom_of_window = $(window).scrollTop() + $(window).height();
 
       // Check the location of each element hidden */
-      $('.timelinediv .container .hidden').each( function(i){
+      $('.aboutcontainer .hidden').each( function(i){
 
           var bottom_of_object = $(this).offset().top + $(this).outerHeight();
 

@@ -17,7 +17,7 @@ html, body{
   height: 100%;
 }
 
-.container{
+.container-portfolio{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,30 +51,7 @@ html, body{
       height: auto;
       text-align: center;
       margin-top: 37vh;
-      /*.letter-container{
-        position: relative;
-        width: 2vw;
-        height: 100px;
-        position: relative;
-        margin: auto;
-        .lettering{
-        transition: all 0.3s;
-        color: white;
-        
-        span{
-          height: 10vw;
-          font-family: 'Economica', sans-serif;
-          font-size: 1.6vw;
-          text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
-          position: absolute;
-          width: 15px;
-          left: 0;
-          top: 0;
-          transform-origin: bottom center;
-        }
-        @include rotated-text(11);
-        }
-      }*/
+      
       h1{
         text-transform: uppercase;
         color: white;
