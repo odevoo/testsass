@@ -198,6 +198,8 @@ h1:hover {
 
 .nav-content {
   overflow: hidden;
+  position: absolute;
+  z-index: 90;
 }
 
 .menu-trigger{
