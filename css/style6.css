@@ -18,14 +18,14 @@ body {
 .title2 {
   font-family: 'Satisfy', cursive;
   transform: rotate(15deg);
-  font-size: 30px;
+  font-size: 1vw;
   color: #343436;
   margin-top: -40px; }
 
 .title1 {
   font-family: 'Shrikhand', cursive;
   white-space: nowrap;
-  font-size: 100px;
+  font-size: 5vw;
   color: #343436;
   transform: perspective(0) rotateX(45deg);
   will-change: transform;
@@ -36,7 +36,7 @@ body {
 .invisible {
   display: none; }
 
-h1:hover {
+.title1:hover {
   cursor: default;
   transition-duration: .5s;
   transform: perspective(0) rotateX(45deg) translateY(-20px);
@@ -153,7 +153,7 @@ h1:hover {
   font-family: "Anton", sans-serif;
   line-height: 1;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2vw;
   display: flex;
   z-index: -10; }
 
@@ -167,9 +167,15 @@ h1:hover {
   padding: 2%; }
 
 .aboutimgtag {
+  width: 100%;
+  height: auto;
   border: 1px solid #fff;
   border-radius: 4px;
   padding: 5px; }
+  @media (min-width: 700px) {
+    .aboutimgtag {
+      min-width: 350px;
+      height: 100%; } }
 
 /*************** TIMELINE EXPERIENCE ****************/
 #timeline .timeline-item:after, #timeline .timeline-item:before {
